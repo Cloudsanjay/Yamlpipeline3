@@ -10,6 +10,6 @@ steps:
     provider: 'azurerm'
     command: 'init'
     backendServiceArm: 'ServiceConnection'
-    backendAzureRmStorageAccountName: 'sanjaysingraur'
-    backendAzureRmContainerName: 'sanjaycontainer'
+    backendAzureRmStorageAccountName: 'sanjaysingraur3'
+    backendAzureRmContainerName: 'sanjaycontainer3'
     backendAzureRmKey: 'mango.tfstate'

@@ -9,7 +9,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'ServiceConnection3'
+    backendServiceArm: 'WLF_service3'
     backendAzureRmResourceGroupName: 'sanjayrg'
     backendAzureRmStorageAccountName: 'sanjaysingraur3'
     backendAzureRmContainerName: 'sanjaycontainer3'

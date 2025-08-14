@@ -9,8 +9,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'WLF_service3'
-    backendAzureRmResourceGroupName: 'sanjayrg'
-    backendAzureRmStorageAccountName: 'sanjaysingraur3'
-    backendAzureRmContainerName: 'sanjaycontainer3'
-    backendAzureRmKey: 'mango.tfstate'
+    backendAzureRmStorageAccountName: 'sanjaystorage4040'
+    backendAzureRmContainerName: 'sanjaycontainer'
+    backendAzureRmKey: 'sanjay.tfstate'

@@ -7,7 +7,7 @@ pool:
 stages:
   - stage: 'terraform_nit'
     jobs:
-      - job:
+      - job: sanjay
         displayName: init and validate
         steps:
           - task: TerraformTask@5
@@ -25,6 +25,7 @@ stages:
               provider: 'azurerm'
               command: 'validate'
       - job:
+        dependsOn: sanjay
         displayName: terrafom plan
         steps:
           - task: TerraformTask@5

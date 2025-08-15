@@ -33,10 +33,7 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'init'
-              backendServiceArm: 'YamlSRC'
-              backendAzureRmStorageAccountName: 'sanjaystorage4040'
-              backendAzureRmContainerName: 'sanjaycontainer'
-              backendAzureRmKey: 'sanjay.tfsate'
+
           - task: TerraformTask@5
             displayName: 'Terraform plan'
             inputs:

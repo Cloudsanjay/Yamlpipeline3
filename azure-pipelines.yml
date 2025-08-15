@@ -8,6 +8,7 @@ stages:
   - stage: 'terraform_nit'
     jobs:
       - job:
+        displayName: init and validate
         steps:
           - task: TerraformTask@5
             displayName: 'Terraform init'
@@ -23,10 +24,13 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'validate'
+      - job:
+        displayName: terrafom plan
+        steps:
           - task: TerraformTask@5
             displayName: 'Terraform plan'
             inputs:
               provider: 'azurerm'
               command: 'plan' 
               environmentServiceNameAzureRM: 'YamlSRC'
-
+      

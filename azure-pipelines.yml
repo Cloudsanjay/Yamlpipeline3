@@ -27,6 +27,6 @@ stages:
             displayName: 'Terraform plan'
             inputs:
               provider: 'azurerm'
-              command: 'plan'
+              command: 'plan' 
               environmentServiceNameAzureRM: 'YamlSRC'
 

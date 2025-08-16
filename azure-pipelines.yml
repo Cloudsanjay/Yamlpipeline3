@@ -29,12 +29,6 @@ stages:
         displayName: terrafom plan
         steps:
           - task: TerraformTask@5
-            displayName: 'Terraform init'
-            inputs:
-              provider: 'azurerm'
-              command: 'init'
-
-          - task: TerraformTask@5
             displayName: 'Terraform plan'
             inputs:
               provider: 'azurerm'

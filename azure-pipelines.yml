@@ -5,7 +5,7 @@ pool:
   name: Default
 
 stages:
-  - stage: 'terraform_nit'
+  - stage:
     jobs:
       - job: sanjay
         displayName: init and validate

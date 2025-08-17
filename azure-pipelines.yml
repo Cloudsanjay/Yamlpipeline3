@@ -5,7 +5,7 @@ pool:
   name: Default
 
 stages:
-  - stage:
+  - stage: 'Build_Stage'
     jobs:
       - job: sanjay
         displayName: init and validate
@@ -30,6 +30,20 @@ stages:
               provider: 'azurerm'
               command: 'plan' 
               environmentServiceNameAzureRM: 'YamlSRC'
+
+  - stage: Apply_Stage
+    jobs:
+      - job:  
+        steps:
+          - task: TerraformTask@5
+            displayName: 'Terraform init'
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              backendServiceArm: 'YamlSRC'
+              backendAzureRmStorageAccountName: 'sanjaystorage4040'
+              backendAzureRmContainerName: 'sanjaycontainer'
+              backendAzureRmKey: 'sanjay.tfsate'   
           - task: TerraformTask@5
             inputs:
               provider: 'azurerm'

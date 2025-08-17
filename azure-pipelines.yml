@@ -30,4 +30,8 @@ stages:
               provider: 'azurerm'
               command: 'plan' 
               environmentServiceNameAzureRM: 'YamlSRC'
-      
+          - task: TerraformTask@5
+            inputs:
+              provider: 'azurerm'
+              command: 'apply'
+              environmentServiceNameAzureRM: 'YamlSRC'
